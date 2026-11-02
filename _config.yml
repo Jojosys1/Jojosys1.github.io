@@ -1,5 +1,55 @@
+# Academic Pages configuration
 title: "GLODJO Jolémon"
 name: "GLODJO Jolémon"
-description: "Étudiant en Master d'Ingénieur en Modélisation et Simulation Numérique"
+description: "Élève ingénieur en Génie Mathématique et Modélisation — mathématiques, modélisation, intelligence artificielle et simulation numérique."
 url: "https://Jojosys1.github.io"
+baseurl: ""
 repository: "Jojosys1/Jojosys1.github.io"
+locale: "fr-FR"
+
+# Site author
+author:
+  name: "GLODJO Jolémon"
+  avatar: "/images/profile.jpg"
+  bio: "Élève ingénieur en Génie Mathématique et Modélisation"
+  location: "Calavi, Bénin"
+  employer: "École Nationale Supérieure de Génie Mathématique et Modélisation"
+  uri: "https://github.com/Jojosys1"
+  email: "glodjojolemon0@gmail.com"
+  github: "Jojosys1"
+
+# Build
+markdown: kramdown
+remote_theme: "academicpages/academicpages.github.io"
+plugins:
+  - jekyll-include-cache
+
+include:
+  - _pages
+  - files
+
+collections:
+  projects:
+    output: true
+    permalink: /projects/:path/
+
+defaults:
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      author_profile: true
+  - scope:
+      path: ""
+      type: projects
+    values:
+      layout: single
+      author_profile: true
+      share: true
+
+exclude:
+  - vendor
+  - Gemfile.lock
+  - README.md
+  - "*.ipynb"
